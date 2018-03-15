@@ -20,6 +20,10 @@ public class MainActivity extends AppCompatActivity {
                 "FirstName CHAR(50),  " +
                 "Age int(3));");
 
+        db.execSQL("insert  into MyTable Values('kasapbasi', 'mustafa', 61);");
+        db.close();
+        SQLiteDatabase db= openOrCreateDatabase("Test",MODE_PRIVATE,null);
+
 
 
 
