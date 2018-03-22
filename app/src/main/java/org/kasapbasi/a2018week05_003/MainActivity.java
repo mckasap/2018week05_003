@@ -21,9 +21,10 @@ public class MainActivity extends AppCompatActivity {
                 "Age int(3));");
 
         db.execSQL("insert  into MyTable Values('kasapbasi', 'mustafa', 61);");
-        db.close();
-        SQLiteDatabase db= openOrCreateDatabase("Test",MODE_PRIVATE,null);
 
+        db.close();
+        db= openOrCreateDatabase("Test",MODE_PRIVATE,null);
+       // test
 
 
 
