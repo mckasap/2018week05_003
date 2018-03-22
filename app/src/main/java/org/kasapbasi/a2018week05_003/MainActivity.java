@@ -32,6 +32,20 @@ public class MainActivity extends AppCompatActivity {
         Cursor c= db.rawQuery("Select * from MyTable",null);
         Log.i("DATABASE",c.getColumnCount()+"");
 
+        if(c!=null && c.moveToFirst())
+             do{
+                 Log.i("DATABASE","ID:"+c.getInt(c.getColumnIndex("Id")));
+                 Log.i("DATABASE","LastName:"+c.getString(c.getColumnIndex("Lastname")));
+                 Log.i("DATABASE","FirstName:"+c.getString(c.getColumnIndex("FirstName")));
+                 Log.i("DATABASE","Age:"+c.getInt(c.getColumnIndex("Age")));
+
+             }while(c.moveToNext());
+
+
+
         db.close();
     }
 }
+
+
+
